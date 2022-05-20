@@ -1,1 +1,5 @@
-
+[[headers]]
+  for = '/*'
+  [headers.values]
+    Access-Control-Allow-Origin = '*'
+    x-custom-toml = 'test1'
