@@ -1,0 +1,11 @@
+{
+  "name": "simple-nextjs-monorepo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build:app1": "npm --prefix app1 run build",
+    "build:app2": "npm --prefix app2 run build"
+  }
+}
+
