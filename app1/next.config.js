@@ -65,52 +65,51 @@ const nextConfig = {
       },
     ];
   },
-  sassOptions: {
-    includePaths: [path.join(__dirname, "styles")],
-  },
-  webpack: (config, { dev, isServer, ...options }) => {
-    if (process.env.ANALYZE) {
-      const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
-      config.plugins.push(
-        new BundleAnalyzerPlugin({
-          analyzerMode: "static",
-          reportFilename: options.isServer
-            ? "../analyze/server.html"
-            : "./analyze/client.html",
-        })
-      );
-    }
+  // sassOptions: {
+  //   includePaths: [path.join(__dirname, "styles")],
+  // },
+  // webpack: (config, { dev, isServer, ...options }) => {
+  //   if (process.env.ANALYZE) {
+  //     const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer");
+  //     config.plugins.push(
+  //       new BundleAnalyzerPlugin({
+  //         analyzerMode: "static",
+  //         reportFilename: options.isServer
+  //           ? "../analyze/server.html"
+  //           : "./analyze/client.html",
+  //       })
+  //     );
+  //   }
 
-    // config.experiments.topLevelAwait = true;
+  // config.experiments.topLevelAwait = true;
 
-    // config.plugins.push(
-    //   new ModuleFederationPlugin({
-    //     remotes: {
-    //       elc_service_analytics:
-    //         "elc_service_analytics@http://localhost:8000/fe-elc-service-analytics/build/bundle.js",
-    //     },
-    //   })
-    // );
+  // config.plugins.push(
+  //   new ModuleFederationPlugin({
+  //     remotes: {
+  //       elc_service_analytics:
+  //         "elc_service_analytics@http://localhost:8000/fe-elc-service-analytics/build/bundle.js",
+  //     },
+  //   })
+  // );
 
-    // if (process.env.CHECK_CIRCULAR_DEPS) {
-    //   const CircularDependencyPlugin = require("circular-dependency-plugin");
-    //   config.plugins.push(
-    //     new CircularDependencyPlugin({
-    //       exclude: /node_modules/,
-    //     })
-    //   );
-    // }
-    // const performance = dev
-    //   ? config.performance
-    //   : {
-    //       hints: "error",
-    //       // ±300kb gzipped
-    //       maxAssetSize: 1200000,
-    //       maxEntrypointSize: 1200000,
-    //     };
-    // config.performance = performance;
-    return config;
-  },
+  // if (process.env.CHECK_CIRCULAR_DEPS) {
+  //   const CircularDependencyPlugin = require("circular-dependency-plugin");
+  //   config.plugins.push(
+  //     new CircularDependencyPlugin({
+  //       exclude: /node_modules/,
+  //     })
+  //   );
+  // }
+  // const performance = dev
+  //   ? config.performance
+  //   : {
+  //       hints: "error",
+  //       // ±300kb gzipped
+  //       maxAssetSize: 1200000,
+  //       maxEntrypointSize: 1200000,
+  //     };
+  // config.performance = performance;
+  // return config;
 };
 
 module.exports = nextConfig;
