@@ -1,4 +1,3 @@
-// /** @type {import('next').NextConfig} */
 // const nextConfig = {
 //   reactStrictMode: true,
 //   async headers() {
@@ -20,6 +19,8 @@
 
 // const withNx = require("@nrwl/next/plugins/with-nx");
 // const { ModuleFederationPlugin } = require("webpack").container;
+
+/** @type {import('next').NextConfig} */
 const path = require("path");
 
 const contentSecurityPolicy = `
@@ -33,9 +34,9 @@ const securityHeaders = [
   },
 ];
 
-/**
- * @type {import('@nrwl/next/plugins/with-nx').WithNxOptions}
- **/
+// /**
+//  * @type {import('@nrwl/next/plugins/with-nx').WithNxOptions}
+//  **/
 const nextConfig = {
   experimental: {
     optimizeCss: true,
