@@ -4,3 +4,5 @@
     Access-Control-Allow-Origin = '*'
     x-custom-toml = 'test2'
 
+[[plugins]]
+   package = "@netlify/plugin-nextjs"

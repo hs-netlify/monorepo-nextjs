@@ -3,3 +3,6 @@
   [headers.values]
     Access-Control-Allow-Origin = '*'
     x-custom-toml = 'test1'
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
