@@ -4,7 +4,7 @@ const nextConfig = {
   async headers() {
     return [
       {
-        source: "/*",
+        source: "/",
         headers: [
           {
             key: "x-custom-header-config",
