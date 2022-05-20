@@ -21,7 +21,7 @@
 // const { ModuleFederationPlugin } = require("webpack").container;
 
 /** @type {import('next').NextConfig} */
-const path = require("path");
+//const path = require("path");
 
 const contentSecurityPolicy = `
   frame-ancestors 'self' *.google.com *.googleusercontent.com
