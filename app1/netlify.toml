@@ -1,8 +1,14 @@
-[[headers]]
-  for = '/*'
+
+  # this will force a build regardless of changes in the app
+  # remove this after nx:affected workflow
+  # ignore = "/bin/false"
+
+[[headers]] 
+  for = "/*"
   [headers.values]
-    Access-Control-Allow-Origin = '*'
-    x-custom-toml = 'test1'
+    Access-Control-Allow-Origin = "*"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
